@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="gatunek">
+			<state id="country" />
+			<state id="klasyczna" />
+			<state id="rock" />
+			<state id="jazz" />
+			<state id="opera" />
+			<state id="rock_instrumentalny" />
+			<state id="swing" />
+			<probabilities>0.1428571428571428 0.1428571428571428 0.1428571428571428 0.1428571428571428 0.1428571428571428 0.1428571428571428 0.1428571428571428</probabilities>
+		</cpt>
+		<cpt id="gitara_elektryczna">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.06542056074766356 0.9345794392523364 0.0009990009990009992 0.999000999000999 0.9407337723424272 0.05926622765757283 0.1452991452991453 0.8547008547008547 0.000999001 0.999001 0.94073377 0.059266228 0.14529915 0.85470085</probabilities>
+		</cpt>
+		<cpt id="wokal">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.9523809523809523 0.04761904761904767 0 1 1 0 0.5 0.5 1 0 0 1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="gitara_basowa">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.2537313432835821 0.7462686567164178 0.0196078431372549 0.9803921568627451 0.9523809523809523 0.04761904761904767 0.6211180124223603 0.3788819875776397 0.0196078431372549 0.9803921568627451 0.9523809523809523 0.04761904761904767 0.6211180124223603 0.3788819875776397</probabilities>
+		</cpt>
+		<cpt id="gitara_akustyczna">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.9615384615384615 0.03846153846153855 0.02912621359223301 0.970873786407767 0.4825090470446321 0.517490952955368 0.03846153846153846 0.9615384615384616 0.02912621359223301 0.970873786407767 0.4825090470446321 0.517490952955368 0.03846153846153846 0.9615384615384616</probabilities>
+		</cpt>
+		<cpt id="harmonijka">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.7692307692307692 0.2307692307692308 0.0196078431372549 0.9803921568627451 0.1666666666666667 0.8333333333333333 0.06542056074766356 0.9345794392523364 0.0196078431372549 0.9803921568627451 0.1666666666666667 0.8333333333333333 0.06542056074766356 0.9345794392523364</probabilities>
+		</cpt>
+		<cpt id="banjo">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.8333333333333334 0.1666666666666666 0.0009990009990009992 0.999000999000999 0.1150442477876106 0.8849557522123894 0.001996007984031936 0.998003992015968 0.0009990009990009992 0.999000999000999 0.1150442477876106 0.8849557522123894 0.001996007984031936 0.998003992015968</probabilities>
+		</cpt>
+		<cpt id="skrzypce">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.7407407407407407 0.2592592592592593 0.375 0.625 0.1304347826086956 0.8695652173913043 0.02912621359223301 0.970873786407767 0.375 0.625 0.1304347826086956 0.8695652173913043 0.02912621359223301 0.970873786407767</probabilities>
+		</cpt>
+		<cpt id="harfa">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.009900990099009901 0.9900990099009901 0.158898 0.841102 0.02912621359223301 0.970873786407767 0.09090909090909091 0.9090909090909091 0.158898 0.841102 0.02912621359223301 0.970873786407767 0.09090909090909091 0.9090909090909091</probabilities>
+		</cpt>
+		<cpt id="pianino">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.2307692307692308 0.7692307692307693 0.8695652173913044 0.1304347826086956 0.1304347826086956 0.8695652173913043 0.8333333333333334 0.1666666666666666 0.8695652173913044 0.1304347826086956 0.1304347826086956 0.8695652173913043 0.8333333333333334 0.1666666666666666</probabilities>
+		</cpt>
+		<cpt id="saksofon">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.02912621359223301 0.970873786407767 0.2307692307692308 0.7692307692307693 0.04761904761904762 0.9523809523809523 0.742097 0.257903 0.2307692307692308 0.7692307692307693 0.04761904761904762 0.9523809523809523 0.742097 0.257903</probabilities>
+		</cpt>
+		<cpt id="trabka">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.09090909090909091 0.9090909090909091 0.2307692307692308 0.7692307692307693 0.1304347826086956 0.8695652173913043 0.8333333333333334 0.1666666666666666 0.2307692307692308 0.7692307692307693 0.1304347826086956 0.8695652173913043 0.8333333333333334 0.1666666666666666</probabilities>
+		</cpt>
+		<cpt id="kontrabas">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.2307692307692308 0.7692307692307693 0.42666 0.57334 0.09090909090909091 0.9090909090909091 0.78125 0.21875 0.42666 0.57334 0.09090909090909091 0.9090909090909091 0.78125 0.21875</probabilities>
+		</cpt>
+		<cpt id="taneczny">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>gatunek</parents>
+			<probabilities>0.753829 0.246171 0.396778 0.6032219999999999 0.1666666666666667 0.8333333333333333 0.09090909090909091 0.9090909090909091 0 1 0.1666666666666667 0.8333333333333333 0.9523809523809523 0.04761904761904767</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.3.3603.0 ACADEMIC" name="Network1" faultnameformat="nodestate">
+			<node id="gitara_elektryczna">
+				<name>gitara_elektryczna</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>713 254 845 341</position>
+			</node>
+			<node id="wokal">
+				<name>wokal</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>769 467 912 543</position>
+			</node>
+			<node id="gatunek">
+				<name>gatunek</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>437 419 579 507</position>
+			</node>
+			<node id="gitara_basowa">
+				<name>gitara_basowa</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>610 165 742 252</position>
+			</node>
+			<node id="gitara_akustyczna">
+				<name>gitara_akustyczna</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>466 128 598 215</position>
+			</node>
+			<node id="harmonijka">
+				<name>harmonijka</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>298 149 430 236</position>
+			</node>
+			<node id="banjo">
+				<name>banjo</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>179 247 311 334</position>
+			</node>
+			<node id="skrzypce">
+				<name>skrzypce</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>144 378 276 465</position>
+			</node>
+			<node id="harfa">
+				<name>harfa</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>136 516 268 603</position>
+			</node>
+			<node id="pianino">
+				<name>pianino</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>226 640 358 727</position>
+			</node>
+			<node id="saksofon">
+				<name>saksofon</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>407 676 539 763</position>
+			</node>
+			<node id="trabka">
+				<name>trabka</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>592 650 724 737</position>
+			</node>
+			<node id="kontrabas">
+				<name>kontrabas</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>727 575 859 662</position>
+			</node>
+			<node id="taneczny">
+				<name>taneczny</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>767 363 899 450</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
