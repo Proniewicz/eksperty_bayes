@@ -33,7 +33,7 @@ public class Bayes {
         double[] genres = network.getNodeValue("gatunek");
         StringBuilder result = new StringBuilder();
         for(int i=0; i < genres.length; i++) {
-            result.append(network.getOutcomeId("gatunek", i) + ": " + genres[i] + "\n");
+            result.append(network.getOutcomeId("gatunek", i) + ": " + genres[i] + "<br/>");
         }
         return result.toString();
     }

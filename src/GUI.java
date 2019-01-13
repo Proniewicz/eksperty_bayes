@@ -21,7 +21,7 @@ public class GUI extends JPanel
     StringBuffer choices;
 
     public GUI() {
-        super(new GridLayout(8, 2));
+        super(new GridLayout(2, 2));
 
         Bayes bayes = new Bayes();
 
@@ -30,8 +30,10 @@ public class GUI extends JPanel
         nodeNames = Arrays.asList("gitara_elektryczna", "gitara_basowa", "gitara_akustyczna", "harmonijka", "banjo", "skrzypce", "harfa", "pianino", "saksofon", "trabka", "kontrabas", "wokal", "taneczny");
 
         for (String s : nodeNames) {
-            JCheckBox jCheckBoxYes = new JCheckBox(s);
-            JCheckBox jCheckBoxNo = new JCheckBox(s);
+            JCheckBox jCheckBoxYes = new JCheckBox(s + " tak");
+            jCheckBoxYes.setHorizontalTextPosition(SwingConstants.LEFT);
+            JCheckBox jCheckBoxNo = new JCheckBox("nie");
+            jCheckBoxNo.setHorizontalTextPosition(SwingConstants.LEFT);
             ArrayList<JCheckBox> checkBoxes = new ArrayList<>();
             checkBoxes.add(jCheckBoxYes);
             checkBoxes.add(jCheckBoxNo);
@@ -50,15 +52,13 @@ public class GUI extends JPanel
                 label.setText("");
                 selectedOptions.clear();
                 getCheckBoxResult();
-                label.setText(bayes.getResult(selectedOptions));
+                label.setText("<html>" + bayes.getResult(selectedOptions) + "</html>");
             }
         });
 
-
-        add(new Label("Opcje"));
         add(checkPanel);
-        add(new JPanel());
         add(submit);
+        add(new JPanel());
         add(label);
 
         setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
@@ -66,7 +66,7 @@ public class GUI extends JPanel
 
     private static void createAndShowGUI() {
         //Create and set up the window.
-        JFrame frame = new JFrame("CheckBoxDemo");
+        JFrame frame = new JFrame("Bayes music");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Create and set up the content pane.
