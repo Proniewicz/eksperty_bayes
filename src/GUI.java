@@ -21,25 +21,31 @@ public class GUI extends JPanel
     StringBuffer choices;
 
     public GUI() {
-        super(new GridLayout(2, 2));
+        super(new GridLayout(3, 6));
 
         Bayes bayes = new Bayes();
-
-        JPanel checkPanel = new JPanel(new GridLayout(5, 3));
 
         nodeNames = Arrays.asList("gitara_elektryczna", "gitara_basowa", "gitara_akustyczna", "harmonijka", "banjo", "skrzypce", "harfa", "pianino", "saksofon", "trabka", "kontrabas", "wokal", "taneczny");
 
         for (String s : nodeNames) {
-            JCheckBox jCheckBoxYes = new JCheckBox(s + " tak");
-            jCheckBoxYes.setHorizontalTextPosition(SwingConstants.LEFT);
+            JPanel checkPanel = new JPanel(new GridLayout(10, 3));
+            JLabel label = new JLabel(s);
+            JCheckBox jCheckBoxYes = new JCheckBox("tak");
+            //jCheckBoxYes.setHorizontalTextPosition(SwingConstants.LEFT);
             JCheckBox jCheckBoxNo = new JCheckBox("nie");
-            jCheckBoxNo.setHorizontalTextPosition(SwingConstants.LEFT);
+            //jCheckBoxNo.setHorizontalTextPosition(SwingConstants.LEFT);
+            JCheckBox jCheckBoxWhatever = new JCheckBox("whatever");
             ArrayList<JCheckBox> checkBoxes = new ArrayList<>();
             checkBoxes.add(jCheckBoxYes);
             checkBoxes.add(jCheckBoxNo);
+            checkBoxes.add(jCheckBoxWhatever);
             options.put(s, checkBoxes);
+            checkPanel.add(label);
+            checkPanel.add(new JPanel());
             checkPanel.add(jCheckBoxYes);
             checkPanel.add(jCheckBoxNo);
+            checkPanel.add(jCheckBoxWhatever);
+            add(checkPanel);
         }
 
         JLabel label = new JLabel();
@@ -55,8 +61,7 @@ public class GUI extends JPanel
                 label.setText("<html>" + bayes.getResult(selectedOptions) + "</html>");
             }
         });
-
-        add(checkPanel);
+        
         add(submit);
         add(new JPanel());
         add(label);
