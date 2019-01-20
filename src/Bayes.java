@@ -1,5 +1,6 @@
 import smile.Network;
 
+import java.text.DecimalFormat;
 import java.util.Map;
 
 public class Bayes {
@@ -30,10 +31,14 @@ public class Bayes {
         network.clearAllEvidence();
         nodes.forEach((option, evidence) -> network.setEvidence(option, evidence));
         network.updateBeliefs();
+        DecimalFormat df = new DecimalFormat("#.##");
         double[] genres = network.getNodeValue("gatunek");
+        for (int i = 0; i < genres.length; i++) {
+            genres[i] *= 100d;
+        }
         StringBuilder result = new StringBuilder();
         for(int i=0; i < genres.length; i++) {
-            result.append(network.getOutcomeId("gatunek", i) + ": " + genres[i] + "<br/>");
+            result.append(network.getOutcomeId("gatunek", i) + ": " + df.format(genres[i]) + "%" + "<br/>");
         }
         return result.toString();
     }
